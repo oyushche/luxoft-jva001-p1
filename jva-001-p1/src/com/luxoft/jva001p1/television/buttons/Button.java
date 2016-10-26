@@ -1,10 +1,9 @@
 package com.luxoft.jva001p1.television.buttons;
 
-
 import com.luxoft.jva001p1.television.Remote;
 import com.luxoft.jva001p1.television.TV;
 
-public class Button
+public abstract class Button
 {
     private Remote remote;
 
@@ -13,10 +12,7 @@ public class Button
         this.remote = remote;
     }
 
-    public void click()
-    {
-        throw new UnsupportedOperationException();
-    }
+    public abstract void click();
 
     TV getTv()
     {
