@@ -1,7 +1,7 @@
 package com.luxoft.jva001p1.television;
 
 
-import com.luxoft.jva001p1.television.buttons.Button;
+import com.luxoft.jva001p1.television.buttons.AbstractButton;
 import com.luxoft.jva001p1.television.buttons.ChannelButton;
 import com.luxoft.jva001p1.television.buttons.NextButton;
 import com.luxoft.jva001p1.television.buttons.OffButton;
@@ -13,11 +13,11 @@ public class Remote
     public static final int COUNT_OF_CHANNEL_BUTTONS = 9;
     private TV tv;
 
-    private Button on;
-    private Button off;
-    private Button nextChannel;
-    private Button prevChannel;
-    private Button[] channels;
+    private AbstractButton on;
+    private AbstractButton off;
+    private AbstractButton nextChannel;
+    private AbstractButton prevChannel;
+    private AbstractButton[] channels;
 
     public Remote()
     {
@@ -26,7 +26,7 @@ public class Remote
         nextChannel = new NextButton(this);
         prevChannel = new PrevButton(this);
 
-        channels = new Button[COUNT_OF_CHANNEL_BUTTONS];
+        channels = new AbstractButton[COUNT_OF_CHANNEL_BUTTONS];
         for (int i = 0; i < COUNT_OF_CHANNEL_BUTTONS; i++)
         {
             channels[i] = new ChannelButton(this, i + 1);
