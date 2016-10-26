@@ -1,6 +1,12 @@
 package com.luxoft.jva001p1.television;
 
-import television.buttons.*;
+
+import com.luxoft.jva001p1.television.buttons.Button;
+import com.luxoft.jva001p1.television.buttons.ChannelButton;
+import com.luxoft.jva001p1.television.buttons.NextButton;
+import com.luxoft.jva001p1.television.buttons.OffButton;
+import com.luxoft.jva001p1.television.buttons.OnButton;
+import com.luxoft.jva001p1.television.buttons.PrevButton;
 
 public class Remote
 {
@@ -45,17 +51,28 @@ public class Remote
 
     public void nextChannel()
     {
+        checkAndTurnOnTv();
         nextChannel.click();
+    }
+
+    private void checkAndTurnOnTv()
+    {
+        if (!tv.isTurnedOn()) {
+            tvOn();
+        }
     }
 
     public void prevChannel()
     {
+        checkAndTurnOnTv();
         prevChannel.click();
     }
 
     public void switchChannel(int channel)
     {
-        if (channel > 0 && channel >= getTv().getCountOfChannels())
+        checkAndTurnOnTv();
+
+        if (channel > 0 && channel <= getTv().getCountOfChannels())
         {
             channels[channel - 1].click();
         }

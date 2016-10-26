@@ -1,6 +1,6 @@
 package com.luxoft.jva001p1.television.buttons;
 
-import television.Remote;
+import com.luxoft.jva001p1.television.Remote;
 
 public class ChannelButton extends Button
 {
@@ -10,6 +10,12 @@ public class ChannelButton extends Button
     {
         super(remote);
         this.channel = channel;
+    }
+
+    @Override
+    public void click()
+    {
+        getTv().switchChannel(channel);
     }
 
     public int getChannel()

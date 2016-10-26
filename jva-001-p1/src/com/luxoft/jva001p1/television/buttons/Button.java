@@ -1,6 +1,8 @@
 package com.luxoft.jva001p1.television.buttons;
 
-import television.Remote;
+
+import com.luxoft.jva001p1.television.Remote;
+import com.luxoft.jva001p1.television.TV;
 
 public class Button
 {
@@ -16,8 +18,8 @@ public class Button
         throw new UnsupportedOperationException();
     }
 
-    public Remote getRemote()
+    TV getTv()
     {
-        return remote;
+        return remote.getTv();
     }
 }

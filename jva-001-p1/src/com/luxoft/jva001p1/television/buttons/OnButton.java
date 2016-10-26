@@ -1,11 +1,17 @@
 package com.luxoft.jva001p1.television.buttons;
 
-import television.Remote;
+import com.luxoft.jva001p1.television.Remote;
 
 public class OnButton extends ActionButton
 {
     public OnButton(Remote remote)
     {
         super(remote, Action.ON);
+    }
+
+    @Override
+    public void click()
+    {
+        getTv().turnOn();
     }
 }
