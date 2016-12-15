@@ -2,7 +2,7 @@ package com.luxoft.jva001p1.television.buttons;
 
 import com.luxoft.jva001p1.television.Remote;
 
-public class PrevButton extends ActionButton
+public class PrevButton extends AbstractActionButton
 {
     public PrevButton(Remote remote)
     {

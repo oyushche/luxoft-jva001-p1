@@ -3,11 +3,11 @@ package com.luxoft.jva001p1.television.buttons;
 
 import com.luxoft.jva001p1.television.Remote;
 
-public class ActionButton extends Button
+public abstract class AbstractActionButton extends AbstractButton
 {
     private Action action;
 
-    public ActionButton(Remote remote, Action action)
+    public AbstractActionButton(Remote remote, Action action)
     {
         super(remote);
         this.action = action;

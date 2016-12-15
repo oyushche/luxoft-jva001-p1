@@ -64,6 +64,5 @@ public class TvDemo
         System.out.println("Ohh, parents coming...");
         remote.tvOff();
         System.out.println("Is tv on : " + tv.isTurnedOn());
-        System.out.println();
     }
 }
