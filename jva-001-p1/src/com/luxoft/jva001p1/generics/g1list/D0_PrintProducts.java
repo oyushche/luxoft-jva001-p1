@@ -3,7 +3,6 @@ package com.luxoft.jva001p1.generics.g1list;
 import com.luxoft.jva001p1.generics.Axe;
 import com.luxoft.jva001p1.generics.Monitor;
 import com.luxoft.jva001p1.generics.Product;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,10 +24,15 @@ public class D0_PrintProducts
 
     private static void printPrices(List<Product> products)
     {
-
         for (Product product : products)
         {
-            System.out.println(product.getPrice());
+            System.out.print("Product: [uid: " + product.getUid() + ", price: " + product.getPrice());
+
+            if (product instanceof Monitor)
+            {
+                System.out.print(", diagonal: " + ((Monitor) product).getDiagonal());
+            }
+            System.out.println("]");
         }
     }
 }
