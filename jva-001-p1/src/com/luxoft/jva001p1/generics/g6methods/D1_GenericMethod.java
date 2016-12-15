@@ -1,4 +1,4 @@
-package com.luxoft.jva001p1.generics.g1list;
+package com.luxoft.jva001p1.generics.g6methods;
 
 import com.luxoft.jva001p1.generics.Axe;
 import com.luxoft.jva001p1.generics.Monitor;
@@ -18,7 +18,6 @@ public class D1_GenericMethod
 
         Axe axe = new Axe(counter++, 1.5);
 
-
         List<Product> products = new ArrayList();
 
         List<Monitor> monitors = new ArrayList();
@@ -33,17 +32,19 @@ public class D1_GenericMethod
         products.add(axe);
         axes.add(axe);
 
+        printProductsOnly(products);
+//        printProductsOnly(args); // will not compile
+//        printProductsOnly(monitors); // will not compile
+
+        printAxesNotMonitorsOrProducts(axes);
+
+//        printAxesNotMonitorsOrProducts(monitors); // will not compile
+//        printAxesNotMonitorsOrProducts(products); // will not compile
+
         printProductPrices(products);
         printProductPrices(monitors);
         printProductPrices(axes);
 
-        printAxesNotMonitorsOrProducts(axes);
-//        printAxesNotMonitorsOrProducts(monitors); // will not compile
-//        printAxesNotMonitorsOrProducts(products); // will not compile
-
-        printProductsOnly(products);
-//        printProductsOnly(args); // will not compile
-//        printProductsOnly(monitors); // will not compile
     }
 
     private static void printProductsOnly(List<Product> products)
@@ -56,16 +57,6 @@ public class D1_GenericMethod
         }
     }
 
-    private static void printProductPrices(List<? extends Product> products)
-    {
-        printSeparator("printProductPrices");
-
-        for (Product product : products)
-        {
-            System.out.println(product.getPrice());
-        }
-    }
-
     private static void printAxesNotMonitorsOrProducts(List<Axe> axes)
     {
         printSeparator("printAxesNotMonitorsOrProducts");
@@ -73,6 +64,16 @@ public class D1_GenericMethod
         for (Axe ax : axes)
         {
             System.out.println(ax);
+        }
+    }
+
+    private static void printProductPrices(List<? extends Product> products)
+    {
+        printSeparator("printProductPrices");
+
+        for (Product product : products)
+        {
+            System.out.println(product.getPrice());
         }
     }
 
