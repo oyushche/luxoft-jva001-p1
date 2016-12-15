@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-public class D1_TypeErasure<T>
+public class D2_TypeErasure<E>
 {
     public <E> void test(Collection<E> data)
     {
-        System.out.println("D1_TypeErasure#test(Collection<E>)");
+        System.out.println("D2_TypeErasure#test(Collection<E>)");
 
         for (E e : data)
         {
@@ -18,7 +18,7 @@ public class D1_TypeErasure<T>
 
     public void test(List<String> data)
     {
-        System.out.println("D1_TypeErasure#test(List<String>)");
+        System.out.println("D2_TypeErasure#test(List<String>)");
 
         for (String s : data)
         {
@@ -28,7 +28,7 @@ public class D1_TypeErasure<T>
 
     public static void main(String[] args)
     {
-        D1_TypeErasure o = new D1_TypeErasure();
+        D2_TypeErasure o = new D2_TypeErasure();
 
         List<Integer> numbers = Arrays.asList(1, 2, 3);
         o.test(numbers);
