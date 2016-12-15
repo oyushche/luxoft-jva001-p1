@@ -12,7 +12,7 @@ public class D0_PrintProducts
     {
         long counter = 1;
 
-        List<Product> products = new ArrayList();
+        List<Product> products = new ArrayList<>();
 
         products.add(new Monitor(counter++, 20));
         products.add(new Monitor(counter++, 20));
