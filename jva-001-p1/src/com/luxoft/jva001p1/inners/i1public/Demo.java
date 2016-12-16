@@ -10,19 +10,21 @@ public class Demo
         list.addString("b");
         list.addString("c");
 
-        System.out.println("StringList.Node class accessible here and we can use it to iterate list.");
-        StringList.Node currentNode = list.getRoot().getNext();
+        System.out.println("StringList.Iterator class accessible here and we can use it to iterate list.");
+        StringList.Iterator iterator = list.getIterator();
 
-        while (currentNode != null)
+        while (iterator.hasNext())
         {
-            System.out.println(currentNode.getString());
-            currentNode = currentNode.getNext();
+            System.out.println(iterator.getNextString());
         }
 
         System.out.println();
-        System.out.println("Also you can create instance of StringList.Node");
+        System.out.println("==========================");
+        System.out.println();
+
+
+        System.out.println("Also you can create instance of StringList.Iterator");
         System.out.println("But you should create new instance of StringList first...");
-        StringList.Node node = new StringList().new Node("test");
-        System.out.println(node);
+        iterator = new StringList().new Iterator();
     }
 }

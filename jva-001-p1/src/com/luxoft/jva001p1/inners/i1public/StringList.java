@@ -10,21 +10,6 @@ public class StringList
         this.root = new Node("root");
     }
 
-    public Node getRoot()
-    {
-        return root;
-    }
-
-    public void print()
-    {
-        Node cn = root.getNext();
-        while (cn != null)
-        {
-            System.out.println(cn.getString());
-            cn = cn.getNext();
-        }
-    }
-
     public void addString(String s)
     {
 
@@ -40,7 +25,32 @@ public class StringList
         cn.setNext(n);
     }
 
-    public class Node
+    public Iterator getIterator()
+    {
+        return new Iterator();
+    }
+
+    public class Iterator
+    {
+        private Node currentNode = root;
+
+        public String getNextString()
+        {
+            if (hasNext())
+            {
+                currentNode = currentNode.getNext();
+                return currentNode.getString();
+            }
+            return null;
+        }
+
+        public boolean hasNext()
+        {
+            return currentNode.getNext() != null;
+        }
+    }
+
+    private class Node
     {
         private String string;
 
