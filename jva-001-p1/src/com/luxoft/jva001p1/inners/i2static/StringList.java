@@ -1,6 +1,5 @@
 package com.luxoft.jva001p1.inners.i2static;
 
-
 public class StringList
 {
     private Node root;
@@ -8,21 +7,6 @@ public class StringList
     public StringList()
     {
         this.root = new Node("root");
-    }
-
-    public Node getRoot()
-    {
-        return root;
-    }
-
-    public void print()
-    {
-        Node cn = root.getNext();
-        while (cn != null)
-        {
-            System.out.println(cn.getString());
-            cn = cn.getNext();
-        }
     }
 
     public void addString(String s)
@@ -38,6 +22,36 @@ public class StringList
         }
 
         cn.setNext(n);
+    }
+
+    public Node getRoot()
+    {
+        return root;
+    }
+
+    public Iterator getIterator()
+    {
+        return new Iterator();
+    }
+
+    public class Iterator
+    {
+        private Node currentNode = root;
+
+        public String getNextString()
+        {
+            if (hasNext())
+            {
+                currentNode = currentNode.getNext();
+                return currentNode.getString();
+            }
+            return null;
+        }
+
+        public boolean hasNext()
+        {
+            return currentNode.getNext() != null;
+        }
     }
 
     public static class Node
@@ -61,7 +75,7 @@ public class StringList
             return next;
         }
 
-        public void setNext(Node next)
+        private void setNext(Node next)
         {
             this.next = next;
         }
