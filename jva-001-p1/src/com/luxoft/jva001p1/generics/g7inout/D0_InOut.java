@@ -26,8 +26,8 @@ public class D0_InOut
 
         copy(products, products);
 
-        copy(axes, monitors);
-        copy(products, axes);
+        copy(axes, monitors);  // weird isn't it?
+        copy(products, axes);  // weird isn't it?
     }
 
     private static void copy(List src, List dest)

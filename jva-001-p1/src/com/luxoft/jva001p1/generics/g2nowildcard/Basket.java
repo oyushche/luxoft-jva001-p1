@@ -2,8 +2,6 @@ package com.luxoft.jva001p1.generics.g2nowildcard;
 
 import com.luxoft.jva001p1.generics.Axe;
 import com.luxoft.jva001p1.generics.Product;
-import com.luxoft.jva001p1.generics.Monitor;
-
 import java.util.ArrayList;
 import java.util.List;
 

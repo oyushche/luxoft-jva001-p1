@@ -24,7 +24,7 @@ public class D2_GenericMethod
         find(products, axe);
 
         find(monitors, monitor);
-        find(monitors, axe);
+        find(monitors, axe); // weird isn't it?
     }
 
     private static Product find(List<? extends Product> products, Product p)
