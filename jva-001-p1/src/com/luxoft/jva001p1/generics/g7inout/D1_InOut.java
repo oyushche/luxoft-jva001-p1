@@ -33,6 +33,8 @@ public class D1_InOut
     private static void copy(List<? extends Product> src, List<? super Product> dest)
     {
         printMethodName("find(" + getActualType(src) +", " + getActualType(dest) + ")");
+
+        dest.addAll(src);
     }
 
     private static String getActualType(Object o)

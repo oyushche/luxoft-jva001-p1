@@ -7,6 +7,7 @@ public class Monitor<T> extends Product<Monitor<T>>
     @Override
     public int subCompare(Monitor o)
     {
+        System.out.println("Monitor#subCompare called");
         return this.diagonal > o.diagonal ? 1 : -1;
     }
 }
