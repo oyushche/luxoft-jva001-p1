@@ -1,19 +1,20 @@
 package com.luxoft.jva001p1.generics.xtasks.bankapp.domain;
 
 import com.luxoft.jva001p1.generics.xtasks.bankapp.exceptions.ClientExistsException;
+import com.luxoft.jva001p1.generics.xtasks.bankapp.service.ClientStorageService;
+import com.luxoft.jva001p1.generics.xtasks.bankapp.service.StorageService;
 import com.luxoft.jva001p1.generics.xtasks.bankapp.utils.ClientRegistrationListener;
-
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 public class Bank
 {
 
-    private Client[] clients;
-    private int countOfClients;
-
-    private final ClientRegistrationListener[] listeners;
+    private StorageService<Client> clientStorageService;
+    private final List<ClientRegistrationListener> listeners;
 
     private int printedClients = 0;
     private int emailedClients = 0;
@@ -21,14 +22,12 @@ public class Bank
 
     public Bank()
     {
-        clients = new Client[1_000];
-        countOfClients = 0;
+        clientStorageService = new ClientStorageService();
 
-        listeners =  new ClientRegistrationListener[3];
-        listeners[0] = new PrintClientListener();
-        listeners[1] = new EmailNotificationListener();
-        listeners[2] = new DebugListener();
-
+        listeners =  new ArrayList<>(3);
+        listeners.add(new PrintClientListener());
+        listeners.add(new EmailNotificationListener());
+        listeners.add(new DebugListener());
     }
 
     public int getPrintedClients()
@@ -48,31 +47,17 @@ public class Bank
 
     public void addClient(final Client client) throws ClientExistsException
     {
-        if (!containsClient(client))
+        if (clientStorageService.store(client) == null)
         {
             throw new ClientExistsException("Client already exists into the bank");
         }
 
-        clients[countOfClients++] = client;
         notify(client);
     }
 
-    private boolean containsClient(Client clientToCheck)
+    public List<Client> getClients()
     {
-        for (Client c : clients)
-        {
-            if (c.getName().equals(clientToCheck.getName()))
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    public Client[] getClients()
-    {
-        return Arrays.copyOf(clients, clients.length);
+        return Collections.unmodifiableList(clientStorageService.getAll());
     }
 
     private void notify(Client client) {

@@ -2,16 +2,15 @@ package com.luxoft.jva001p1.generics.xtasks.bankapp.domain;
 
 import com.luxoft.jva001p1.generics.xtasks.bankapp.exceptions.NotEnoughFundsException;
 
-public abstract class AbstractAccount implements Account
+public abstract class AbstractAccount extends Indexed implements Account
 {
 
-    private int id;
     protected double balance;
 
     public AbstractAccount(int id, double balance)
     {
-        this.id = id;
         this.balance = balance;
+        setId(id);
     }
 
     @Override
@@ -34,16 +33,10 @@ public abstract class AbstractAccount implements Account
 
         if (amount > maximumAmountToWithdraw())
         {
-            throw new NotEnoughFundsException(id, balance, amount, "Requested amount exceeds the maximum amount to withdraw");
+            throw new NotEnoughFundsException(getId(), balance, amount, "Requested amount exceeds the maximum amount to withdraw");
         }
 
         balance -= amount;
-    }
-
-    @Override
-    public int getId()
-    {
-        return id;
     }
 
     @Override
