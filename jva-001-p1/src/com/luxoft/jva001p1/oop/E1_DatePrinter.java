@@ -1,6 +1,6 @@
 package com.luxoft.jva001p1.oop;
 
-import java.util.Date;
+import java.util.*;
 
 public class E1_DatePrinter
 {
