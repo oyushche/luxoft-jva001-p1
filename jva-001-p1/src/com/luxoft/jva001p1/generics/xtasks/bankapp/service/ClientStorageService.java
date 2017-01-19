@@ -42,24 +42,39 @@ public class ClientStorageService implements StorageService<Client>
     @Override
     public Client getById(int id)
     {
+        for (Client client : clients)
+        {
+            if (client.getId() == id)
+            {
+                return client;
+            }
+        }
         return null;
     }
 
     @Override
     public Client update(Client toUpdate)
     {
-        return null;
+        Client c = getById(toUpdate.getId());
+
+        if (c != null)
+        {
+            clients.remove(c);
+            clients.add(toUpdate);
+        }
+
+        return c;
     }
 
     @Override
     public void delete(Client object)
     {
-
+        clients.remove(object);
     }
 
     @Override
     public List<Client> getAll()
     {
-        return null;
+        return new ArrayList<>(clients);
     }
 }
