@@ -22,8 +22,6 @@ public class Bank
 
     public Bank()
     {
-        clientStorageService = new ClientStorageService();
-
         listeners =  new ArrayList<>(3);
         listeners.add(new PrintClientListener());
         listeners.add(new EmailNotificationListener());
@@ -96,6 +94,11 @@ public class Bank
                     + DateFormat.getDateInstance(DateFormat.FULL).format(new Date()));
             debuggedClients++;
         }
+    }
+
+    public void setClientStorageService(StorageService<Client> clientStorageService)
+    {
+        this.clientStorageService = clientStorageService;
     }
 }
 

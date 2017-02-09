@@ -6,6 +6,7 @@ import com.luxoft.jva001p1.generics.xtasks.bankapp.exceptions.ClientExistsExcept
 import com.luxoft.jva001p1.generics.xtasks.bankapp.exceptions.NotEnoughFundsException;
 import com.luxoft.jva001p1.generics.xtasks.bankapp.exceptions.OverdraftLimitExceededException;
 import com.luxoft.jva001p1.generics.xtasks.bankapp.service.BankService;
+import com.luxoft.jva001p1.generics.xtasks.bankapp.service.ClientStorageService;
 
 public class BankApplication {
 	
@@ -13,6 +14,8 @@ public class BankApplication {
 	
 	public static void main(String[] args) {
 		bank = new Bank();
+		bank.setClientStorageService(new ClientStorageService());
+
 		modifyBank();
 		printBalance();
 		BankService.printMaximumAmountToWithdraw(bank);
