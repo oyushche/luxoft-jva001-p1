@@ -4,16 +4,16 @@ public class Demo
 {
     public static void main(String[] args)
     {
-        StringList first = new StringList();
+        StringList list = new StringList();
 
-        first.addString("a");
-        first.addString("b");
-        first.addString("c");
+        list.addString("a");
+        list.addString("b");
+        list.addString("c");
 
         System.out.println();
         System.out.println("You can get instance of StringList.Node and iterate list yourself");
 
-        StringList.Node listNode = first.getRoot();
+        StringList.Node listNode = list.getRoot();
 
         do
         {

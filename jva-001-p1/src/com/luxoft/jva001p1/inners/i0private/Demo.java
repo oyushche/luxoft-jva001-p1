@@ -4,14 +4,14 @@ public class Demo
 {
     public static void main(String[] args)
     {
-        StringList first = new StringList();
+        StringList list = new StringList();
 
-        first.addString("a");
-        first.addString("b");
-        first.addString("c");
+        list.addString("a");
+        list.addString("b");
+        list.addString("c");
 
-        first.print();
+        list.print();
 
-        System.out.println("Inner class is not accessible here: " + first.getRoot());
+        System.out.println("Inner class is not accessible here: " + list.getRoot());
     }
 }
