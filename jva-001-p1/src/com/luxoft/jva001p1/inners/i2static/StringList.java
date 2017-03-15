@@ -54,7 +54,7 @@ public class StringList
         }
     }
 
-    private static class Node
+    public static class Node
     {
         private String string;
 
