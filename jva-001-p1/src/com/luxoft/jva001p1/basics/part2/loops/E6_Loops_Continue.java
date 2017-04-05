@@ -9,13 +9,14 @@ public class E6_Loops_Continue
 
         while (counter < totalCycles)
         {
+            counter++;
+
             if (counter % 3 == 0)
             {
-                counter++;
                 continue;
             }
 
-            System.out.println(counter++);
+            System.out.println(counter);
         }
     }
 }
