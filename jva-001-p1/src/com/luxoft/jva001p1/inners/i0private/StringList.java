@@ -30,14 +30,14 @@ public class StringList
 
         Node n = new Node(s);
 
-        Node cn = root;
+        Node currentNode = root;
 
-        while (cn.getNext() != null)
+        while (currentNode.getNext() != null)
         {
-            cn = cn.getNext();
+            currentNode = currentNode.getNext();
         }
 
-        cn.setNext(n);
+        currentNode.setNext(n);
     }
 
     /**
