@@ -30,8 +30,11 @@ public class Demo
 
         for (Object o : products)
         {
-            Product p = (Product) o;
-            System.out.println(p.getPrice());
+            if (o instanceof Product)
+            {
+                Product p = (Product) o;
+                System.out.println(p.getPrice());
+            }
         }
     }
 }

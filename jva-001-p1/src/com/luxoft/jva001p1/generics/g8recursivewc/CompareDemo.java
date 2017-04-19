@@ -4,9 +4,12 @@ public class CompareDemo
 {
     public static void main(String[] args)
     {
-        Monitor m = new Monitor();
-        LCDMonitor lcd = new LCDMonitor();
+        Monitor<Monitor> m = new Monitor<>();
+        LCDMonitor<Monitor> lcd = new LCDMonitor<>();
 
-        m.compareTo(lcd);
+//        m.compareTo(lcd);
+
+//        Axe<Axe> a = new Axe<>();
+//        lcd.compareTo(a);
     }
 }

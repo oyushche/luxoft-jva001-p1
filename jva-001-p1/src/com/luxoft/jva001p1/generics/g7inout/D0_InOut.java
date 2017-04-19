@@ -30,9 +30,9 @@ public class D0_InOut
         copy(products, axes);  // weird isn't it?
     }
 
-    private static void copy(List src, List dest)
+    private static void copy(List<?> src, List<?> dest)
     {
-        printMethodName("find(" + getActualType(src) +", " + getActualType(dest) + ")");
+        printMethodName("copy(" + getActualType(src) +", " + getActualType(dest) + ")");
     }
 
     private static String getActualType(Object o)

@@ -26,13 +26,15 @@ public class D1_InOut
 
         copy(products, products);
 
+        List<Object> objects = new MyArrayList<>("Object");
+
 //        copy(axes, monitors);  // will not compile
 //        copy(products, axes);  // will not compile
     }
 
     private static void copy(List<? extends Product> src, List<? super Product> dest)
     {
-        printMethodName("find(" + getActualType(src) +", " + getActualType(dest) + ")");
+        printMethodName("copy(" + getActualType(src) +", " + getActualType(dest) + ")");
 
         dest.addAll(src);
     }

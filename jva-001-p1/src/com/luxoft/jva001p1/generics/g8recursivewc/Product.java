@@ -8,6 +8,7 @@ public abstract class Product<T extends Product<T>> implements Comparable<T>
     @Override
     public int compareTo(T o)
     {
+        System.out.println("compareTo#called");
         return subCompare(o);
     }
 

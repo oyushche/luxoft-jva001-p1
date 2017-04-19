@@ -8,6 +8,9 @@ import com.luxoft.jva001p1.television.buttons.OffButton;
 import com.luxoft.jva001p1.television.buttons.OnButton;
 import com.luxoft.jva001p1.television.buttons.PrevButton;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Remote
 {
     public static final int COUNT_OF_CHANNEL_BUTTONS = 9;
@@ -17,7 +20,7 @@ public class Remote
     private AbstractButton off;
     private AbstractButton nextChannel;
     private AbstractButton prevChannel;
-    private AbstractButton[] channels;
+    private List<AbstractButton> channels;
 
     public Remote()
     {
@@ -26,10 +29,10 @@ public class Remote
         nextChannel = new NextButton(this);
         prevChannel = new PrevButton(this);
 
-        channels = new AbstractButton[COUNT_OF_CHANNEL_BUTTONS];
+        channels = new ArrayList(COUNT_OF_CHANNEL_BUTTONS);
         for (int i = 0; i < COUNT_OF_CHANNEL_BUTTONS; i++)
         {
-            channels[i] = new ChannelButton(this, i + 1);
+            channels.add(new ChannelButton(this, i + 1));
         }
     }
 
@@ -74,7 +77,7 @@ public class Remote
 
         if (channel > 0 && channel <= getTv().getCountOfChannels())
         {
-            channels[channel - 1].click();
+            channels.get(channel - 1).click();
         }
     }
 
