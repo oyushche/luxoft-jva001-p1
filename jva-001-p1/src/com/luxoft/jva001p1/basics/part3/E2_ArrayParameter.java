@@ -12,6 +12,7 @@ public class E2_ArrayParameter
 
         setValue(numbers, 3, 300);
         setValue(numbers, 7, 777);
+
         System.out.println(Arrays.toString(numbers));
     }
 

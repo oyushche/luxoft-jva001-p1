@@ -1,20 +1,41 @@
 package com.luxoft.jva001p1.basics.part3.xtasks;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class T1_Sort
 {
     public static void main(String[] args) throws Exception
     {
-        int[] numbers = {0, 3, 2, 1, 6, 8, 4, 7, 5, 9};
+        int[] numbers = getArrOfRandomInts(10000);
 
-        System.out.println(Arrays.toString(numbers));
-        System.out.println();
+        int[] copyToSort = Arrays.copyOf(numbers, numbers.length);
 
-        sortAsc(numbers);
+        long startTime = System.currentTimeMillis();
 
-        int[] arrToCheck = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        System.out.println("Is numbers sorted: " + String.valueOf(Arrays.equals(arrToCheck, numbers)).toUpperCase());
+        sortAsc(copyToSort);
+
+        long endTime = System.currentTimeMillis();
+
+        System.out.println("-->" + (endTime - startTime));
+
+        int[] copyToCheck = Arrays.copyOf(numbers, numbers.length);
+
+        Arrays.sort(copyToCheck);
+        System.out.println("Is numbers sorted: "
+                + String.valueOf(Arrays.equals(copyToCheck, numbers)).toUpperCase());
+    }
+
+    private static int[] getArrOfRandomInts(int count)
+    {
+        int[] numbers = new int[count];
+
+        Random r = new Random();
+        for (int i = 0; i < numbers.length; i++)
+        {
+            numbers[i] = r.nextInt(1000);
+        }
+        return numbers;
     }
 
     /**
