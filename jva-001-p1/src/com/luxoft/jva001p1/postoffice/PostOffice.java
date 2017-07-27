@@ -1,5 +1,7 @@
 package com.luxoft.jva001p1.postoffice;
 
+import java.util.Arrays;
+
 public class PostOffice
 {
     private Mail[] notDelivered;
@@ -111,9 +113,7 @@ public class PostOffice
 
     private void extendAddressBook()
     {
-        Person[] newAddressBook = new Person[addressBook.length + 1];
-        System.arraycopy(newAddressBook, 0, addressBook, 0, addressBook.length);
-        this.addressBook = newAddressBook;
+        this.addressBook = Arrays.copyOf(addressBook, addressBook.length + 1);
     }
 
     public void importFromAddressBook(Person[] oldAddressBook)
