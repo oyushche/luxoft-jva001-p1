@@ -18,5 +18,7 @@ public class UsingBasket // after erasing with the restriction
         {
             totalPrice += p.getPrice();
         }
+
+        System.out.println(totalPrice);
     }
 }

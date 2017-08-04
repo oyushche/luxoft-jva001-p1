@@ -12,7 +12,7 @@ public class SyntaxRestrictions
         // will not compile
 //        if (i instanceof Primitive<Boolean>)
 //        {
-//            System.out.println("not Integer");
+//            System.out.println("not com.luxoft.jva001p1.animals.Integer");
 //        }
 
 

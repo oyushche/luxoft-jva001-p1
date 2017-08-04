@@ -5,11 +5,22 @@ public class CompareDemo
     public static void main(String[] args)
     {
         Monitor<Monitor> m = new Monitor<>();
-        LCDMonitor<Monitor> lcd = new LCDMonitor<>();
+        LCDMonitor<Monitor> lcd1 = new LCDMonitor<>();
+        TFTMonitor<Monitor> tft1 = new TFTMonitor<>();
+        TFTMonitor<TFTMonitor> tft2 = new TFTMonitor<>();
+
+//        tft1.compareTo(tft2);
+
+        lcd1.compareTo(m);
+
+//        LCDMonitor lcd2 = new LCDMonitor();
+
+//        lcd1.compareTo(lcd2);
 
 //        m.compareTo(lcd);
 
-//        Axe<Axe> a = new Axe<>();
+
+//        Axe a = new Axe();
 //        lcd.compareTo(a);
     }
 }

@@ -33,7 +33,7 @@ public class D1_GenericMethod
         axes.add(axe);
 
         printProductsOnly(products);
-//        printProductsOnly(args); // will not compile
+//        printProductsOnly(axes); // will not compile
 //        printProductsOnly(monitors); // will not compile
 
         printAxesNotMonitorsOrProducts(axes);

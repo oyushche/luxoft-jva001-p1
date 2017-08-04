@@ -11,8 +11,8 @@ public class D5_Extension
 
         numbers.add(new Long(34L));
 
-//        List<Integer> ints = numbers; // will not compile
+//        List<com.luxoft.jva001p1.animals.Integer> ints = numbers; // will not compile
 //
-//        Integer i = ints.get(0);
+//        com.luxoft.jva001p1.animals.Integer i = ints.get(0);
     }
 }
