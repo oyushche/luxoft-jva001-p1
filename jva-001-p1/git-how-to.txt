@@ -1,1 +1,6 @@
 https://youtu.be/JdLs3gC2UqQ
+
+Birds Examples:
+
+https://github.com/DoNotPanicUA/main/tree/master/birdshop
+https://gist.github.com/Burchynskyi/a6803dd8775e1cadc22ef94c9707808b
