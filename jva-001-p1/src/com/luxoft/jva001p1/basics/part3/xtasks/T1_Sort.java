@@ -7,7 +7,7 @@ public class T1_Sort
 {
     public static void main(String[] args) throws Exception
     {
-        int[] numbers = getArrOfRandomInts(10);
+        int[] numbers = getArrOfRandomInts(10_000);
 
         int[] copyToSort = Arrays.copyOf(numbers, numbers.length);
 
