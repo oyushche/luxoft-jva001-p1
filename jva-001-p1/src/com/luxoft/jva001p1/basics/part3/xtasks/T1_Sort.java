@@ -7,7 +7,7 @@ public class T1_Sort
 {
     public static void main(String[] args) throws Exception
     {
-        int[] numbers = getArrOfRandomInts(10000);
+        int[] numbers = getArrOfRandomInts(10);
 
         int[] copyToSort = Arrays.copyOf(numbers, numbers.length);
 
@@ -23,7 +23,7 @@ public class T1_Sort
 
         Arrays.sort(copyToCheck);
         System.out.println("Is numbers sorted: "
-                + String.valueOf(Arrays.equals(copyToCheck, numbers)).toUpperCase());
+                + String.valueOf(Arrays.equals(copyToCheck, copyToSort)).toUpperCase());
     }
 
     private static int[] getArrOfRandomInts(int count)
@@ -45,7 +45,11 @@ public class T1_Sort
      */
     public static void sortAsc(int[] data)
     {
+        System.out.println(Arrays.toString(data));
+
         // TODO YOUR CODE HERE
+
+        System.out.println(Arrays.toString(data));
     }
 
 
