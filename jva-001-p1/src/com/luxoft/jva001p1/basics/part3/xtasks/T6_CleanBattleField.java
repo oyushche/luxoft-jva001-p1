@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
 
-public class T5_CleanBattleField extends JPanel
+public class T6_CleanBattleField extends JPanel
 {
 
     final boolean COLORED_MODE = false;
@@ -114,11 +114,11 @@ public class T5_CleanBattleField extends JPanel
 
     public static void main(String[] args) throws Exception
     {
-        T5_CleanBattleField bf = new T5_CleanBattleField();
+        T6_CleanBattleField bf = new T6_CleanBattleField();
         bf.runTheGame();
     }
 
-    public T5_CleanBattleField() throws Exception
+    public T6_CleanBattleField() throws Exception
     {
         JFrame frame = new JFrame("YOUR TANK SHOULD FIRE!!!");
         frame.setLocation(750, 150);
