@@ -1,26 +1,24 @@
 package com.luxoft.jva001p1.television;
 
 
-import com.luxoft.jva001p1.television.buttons.AbstractButton;
 import com.luxoft.jva001p1.television.buttons.ChannelButton;
+import com.luxoft.jva001p1.television.buttons.Clickable;
 import com.luxoft.jva001p1.television.buttons.NextButton;
 import com.luxoft.jva001p1.television.buttons.OffButton;
 import com.luxoft.jva001p1.television.buttons.OnButton;
 import com.luxoft.jva001p1.television.buttons.PrevButton;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Remote
 {
     public static final int COUNT_OF_CHANNEL_BUTTONS = 9;
+
     private TV tv;
 
-    private AbstractButton on;
-    private AbstractButton off;
-    private AbstractButton nextChannel;
-    private AbstractButton prevChannel;
-    private List<AbstractButton> channels;
+    private Clickable on;
+    private Clickable off;
+    private Clickable nextChannel;
+    private Clickable prevChannel;
+    private Clickable[] channels;
 
     public Remote()
     {
@@ -29,10 +27,15 @@ public class Remote
         nextChannel = new NextButton(this);
         prevChannel = new PrevButton(this);
 
-        channels = new ArrayList(COUNT_OF_CHANNEL_BUTTONS);
+        channels = new Clickable[COUNT_OF_CHANNEL_BUTTONS];
+        createChannelButtons();
+    }
+
+    private void createChannelButtons()
+    {
         for (int i = 0; i < COUNT_OF_CHANNEL_BUTTONS; i++)
         {
-            channels.add(new ChannelButton(this, i + 1));
+            channels[i] = new ChannelButton(this, i + 1);
         }
     }
 
@@ -77,7 +80,7 @@ public class Remote
 
         if (channel > 0 && channel <= getTv().getCountOfChannels())
         {
-            channels.get(channel - 1).click();
+            channels[channel - 1].click();
         }
     }
 

@@ -3,7 +3,7 @@ package com.luxoft.jva001p1.television.buttons;
 import com.luxoft.jva001p1.television.Remote;
 import com.luxoft.jva001p1.television.TV;
 
-public abstract class AbstractButton
+public abstract class AbstractButton implements Clickable
 {
     private Remote remote;
 
@@ -11,8 +11,6 @@ public abstract class AbstractButton
     {
         this.remote = remote;
     }
-
-    public abstract void click();
 
     TV getTv()
     {
