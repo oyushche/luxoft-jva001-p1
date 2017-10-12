@@ -11,7 +11,7 @@ import java.io.UncheckedIOException;
 
 public class Swatter implements Drawable
 {
-    private static final String IMAGE_PATH = "images/swatter-100.jpg";
+    private static final String IMAGE_PATH = "jva-001-p1/images/swatter-100.jpg";
     private BufferedImage image;
 
     public Swatter()

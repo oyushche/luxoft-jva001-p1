@@ -25,6 +25,6 @@ public class Demo
 
         System.out.println("Also you can create instance of StringList.Iterator");
         System.out.println("But you should create new instance of StringList first...");
-        iterator = new StringList().new Iterator();
+//        iterator = new StringList().new Iterator();
     }
 }

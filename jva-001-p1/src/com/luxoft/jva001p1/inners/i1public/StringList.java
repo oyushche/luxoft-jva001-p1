@@ -34,6 +34,10 @@ public class StringList
     {
         private Node currentNode = root;
 
+        private Iterator()
+        {
+        }
+
         public String getNextString()
         {
             if (hasNext())
