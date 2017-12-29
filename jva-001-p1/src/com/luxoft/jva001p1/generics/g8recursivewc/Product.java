@@ -1,6 +1,6 @@
 package com.luxoft.jva001p1.generics.g8recursivewc;
 
-public abstract class Product<T extends Product<T>> implements Comparable<T>
+public abstract class Product<T extends Product> implements Comparable<T>
 {
     private long uid;
     private double price;

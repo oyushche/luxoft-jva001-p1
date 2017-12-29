@@ -3,6 +3,7 @@ package com.luxoft.jva001p1.generics.g6methods;
 import com.luxoft.jva001p1.generics.Axe;
 import com.luxoft.jva001p1.generics.Monitor;
 import com.luxoft.jva001p1.generics.Product;
+import com.luxoft.jva001p1.inners.Dog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +19,10 @@ public class D1_GenericMethod
 
         Axe axe = new Axe(counter++, 1.5);
 
-        List<Product> products = new ArrayList();
+        List<Product> products = new ArrayList<>();
 
-        List<Monitor> monitors = new ArrayList();
-        List<Axe> axes = new ArrayList();
+        List<Monitor> monitors = new ArrayList<>();
+        List<Axe> axes = new ArrayList<>();
 
         products.add(monitor1);
         monitors.add(monitor1);
@@ -41,9 +42,9 @@ public class D1_GenericMethod
 //        printAxesNotMonitorsOrProducts(monitors); // will not compile
 //        printAxesNotMonitorsOrProducts(products); // will not compile
 
-        printProductPrices(products);
-        printProductPrices(monitors);
-        printProductPrices(axes);
+//        printProductPrices(products);
+//        printProductPrices(monitors);
+//        printProductPrices(axes);
 
     }
 

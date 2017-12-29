@@ -20,5 +20,7 @@ public class UsingBasket // after erasing with the restriction
         }
 
         System.out.println(totalPrice);
+
+        Basket<Integer> basketss = new Basket<>();
     }
 }

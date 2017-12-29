@@ -1,5 +1,7 @@
 package com.luxoft.jva001p1.generics.os;
 
+import com.luxoft.jva001p1.generics.Product;
+
 import java.util.ArrayList;
 import java.util.List;
 

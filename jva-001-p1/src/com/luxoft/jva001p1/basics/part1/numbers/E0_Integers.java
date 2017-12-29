@@ -5,6 +5,15 @@ public class E0_Integers
     public static void main(String[] args)
     {
 
+        new Thread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                System.out.println("sdsds");
+            }
+        }).start();
+
         // comments in Java start with double slash at the start of the line
 
         // --------------

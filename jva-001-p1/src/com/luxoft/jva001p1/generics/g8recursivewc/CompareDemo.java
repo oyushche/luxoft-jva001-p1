@@ -14,13 +14,13 @@ public class CompareDemo
         lcd1.compareTo(m);
 
 //        LCDMonitor lcd2 = new LCDMonitor();
-
+//
 //        lcd1.compareTo(lcd2);
 
-//        m.compareTo(lcd);
+        m.compareTo(lcd1);
 
 
 //        Axe a = new Axe();
-//        lcd.compareTo(a);
+//        lcd1.compareTo(a);
     }
 }
