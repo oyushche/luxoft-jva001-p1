@@ -1,5 +1,6 @@
 package com.luxoft.jva001p1.television.buttons;
 
+import com.luxoft.jva001p1.television.Clickable;
 import com.luxoft.jva001p1.television.Remote;
 import com.luxoft.jva001p1.television.TV;
 

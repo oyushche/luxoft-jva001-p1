@@ -2,7 +2,6 @@ package com.luxoft.jva001p1.television;
 
 
 import com.luxoft.jva001p1.television.buttons.ChannelButton;
-import com.luxoft.jva001p1.television.buttons.Clickable;
 import com.luxoft.jva001p1.television.buttons.NextButton;
 import com.luxoft.jva001p1.television.buttons.OffButton;
 import com.luxoft.jva001p1.television.buttons.OnButton;
