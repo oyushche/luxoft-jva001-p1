@@ -28,10 +28,30 @@ public class Demo
         {
             displayCat(cat);
         }
+
+        // ----------------
+
+        Cat c = new Cat();
+        c.name = "Martin";
+        c.age = 65;
+
+        displayCat(c);
+
+        getOlder(c);
+
+        displayCat(c);
+
+    }
+
+    static void getOlder(Cat cat)
+    {
+        cat.age = cat.age + 1;
     }
 
     static void displayCat(Cat cat)
     {
         System.out.println("Cat: [name: " + cat.name + ", age: " + cat.age + "]");
     }
+
+
 }
