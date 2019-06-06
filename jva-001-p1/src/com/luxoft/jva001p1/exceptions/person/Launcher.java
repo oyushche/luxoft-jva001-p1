@@ -1,15 +1,11 @@
 package com.luxoft.jva001p1.exceptions.person;
 
-import java.io.*;
-import java.sql.SQLException;
-
 public class Launcher
 {
-    private static PersonsHolder personsHolder;
+    private static PersonsHolder personsHolder = new PersonsHolder();
 
     public static void main(String[] args)
     {
-
         try
         {
             Person person = findPerson("John Smith");
@@ -19,8 +15,12 @@ public class Launcher
         {
             System.out.println("Person " + e.getName() + " not found.");
         }
+        finally
+        {
+            System.out.println("Finally");
+        }
 
-
+        System.out.println("EOP");
 
 
     }
@@ -31,13 +31,16 @@ public class Launcher
 
         if (person == null)
         {
-            throw new PersonNotFoundException();
+            PersonNotFoundException pnfe = new PersonNotFoundException();
+            pnfe.setName(name);
+
+            throw pnfe;
         }
 
         return person;
     }
 
-    class PersonsHolder
+    static class PersonsHolder
     {
         public Person find(String name)
         {
