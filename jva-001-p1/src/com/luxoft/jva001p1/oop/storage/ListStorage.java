@@ -1,9 +1,11 @@
 package com.luxoft.jva001p1.oop.storage;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-public class StorageService implements Storage
+public class ListStorage implements Storage
 {
     private List<Bird> birdList = new ArrayList<>();
 
@@ -36,6 +38,17 @@ public class StorageService implements Storage
 
     public List<Bird> getBirds()
     {
-        return new ArrayList<>(birdList);
+        List<Bird> result = new ArrayList<>(birdList);
+
+//        Collections.sort(result, new Comparator<Bird>()
+//        {
+//            @Override
+//            public int compare(Bird o1, Bird o2)
+//            {
+//                return o1.getType().compareTo(o2.getType());
+//            }
+//        });
+
+        return result;
     }
 }

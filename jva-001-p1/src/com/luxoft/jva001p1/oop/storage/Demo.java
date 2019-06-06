@@ -5,7 +5,7 @@ public class Demo
     public static void main(String[] args)
     {
         Shop shop = new Shop();
-        shop.setStorage(new MapStorage());
+        shop.setStorage(new ListStorage());
 
         shop.storeBird(new Bird("Eagle", 20));
         shop.storeBird(new Bird("Eagle", 10));
