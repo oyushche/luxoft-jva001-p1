@@ -22,6 +22,7 @@ public class T1_TanksGetQuadrant extends JPanel
 
         // TODO fill free to add more tests here
         // use callGetTankQuadrant(x, y) helper method
+        callGetTankQuadrant(10, 85);
     }
 
     /**
@@ -33,8 +34,7 @@ public class T1_TanksGetQuadrant extends JPanel
      */
     String getTankQuadrant(int x, int y)
     {
-        // TODO YOUR CODE HERE
-        return null;
+        return "a_1";
     }
 
     // Magic bellow. Do not worry about this now, you will understand everything in this course.

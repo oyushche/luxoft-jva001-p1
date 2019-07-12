@@ -1,16 +1,11 @@
 package com.luxoft.jva001p1.oop.inheritance.p2animals;
 
-public class Animal
+public abstract class Animal implements NiceProducer
 {
     private String picture;
 
     public Animal()
     {
-    }
-
-    public void makeNoise()
-    {
-        System.out.println("Animal#makeNoise");
     }
 
     public void sleep()
@@ -26,5 +21,13 @@ public class Animal
     public void setPicture(String picture)
     {
         this.picture = picture;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Animal{" +
+                "picture='" + picture + '\'' +
+                '}';
     }
 }

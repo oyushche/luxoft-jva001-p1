@@ -10,7 +10,17 @@ public class Demo
     {
         String[] names = {"Alexey", "Aleg", "Sergey", "Maxim"};
 
-        printFiltered(names, s -> s.startsWith("S"));
+        Filter filter = new Filter()
+        {
+            @Override
+            public boolean filter(String s)
+            {
+                return false;
+            }
+        };
+
+        printFiltered(names, filter);
+
     }
 
     public static void printFiltered(String[] data, Filter filter)

@@ -4,10 +4,10 @@ public class Birds
 {
     static boolean SOUT_ENABLED = true;
 
-    static int TYPE = 0;
-    static int PRICE = 1;
-    static int COUNT = 2;
-    static int SOLD = 3;
+    private static final int TYPE = 0;
+    private static final int PRICE = 1;
+    private static final int COUNT = 2;
+    private static final int SOLD = 3;
 
     static String[][] birds = new String[10][];
     static int countOfBirds = 0;
@@ -159,7 +159,7 @@ public class Birds
 
     public static void main(String[] args)
     {
-        System.out.println("Birds shop demo.");
+        System.out.println("Birds shop storage.");
         sout("--------------------------------------------------");
 
         fillShopWithRandomBirds();

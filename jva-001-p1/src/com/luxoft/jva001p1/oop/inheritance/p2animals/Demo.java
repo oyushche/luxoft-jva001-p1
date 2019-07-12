@@ -10,9 +10,13 @@ public class Demo
         dog.setName("Jack");
         animals[0] = dog;
 
+        printObject(dog);
+
         Cat cat = new Cat();
         cat.setName("Tom");
         animals[1] = cat;
+
+        printObject(cat);
 
         Wolf wolf = new Wolf();
         animals[2] = wolf;
@@ -20,9 +24,15 @@ public class Demo
         listenAnimals(animals);
 
         lookAtAnimals(animals);
+
     }
 
-    private static void listenAnimals(Animal[] animals)
+    static void printObject(Object o)
+    {
+        System.out.println(o.toString());
+    }
+
+    static void listenAnimals(Animal[] animals)
     {
         System.out.println();
         System.out.println("--> listening to animals");
@@ -34,7 +44,7 @@ public class Demo
         }
     }
 
-    private static void lookAtAnimals(Animal[] animals)
+    static void lookAtAnimals(Animal[] animals)
     {
         System.out.println();
         System.out.println("--> looking at animals");

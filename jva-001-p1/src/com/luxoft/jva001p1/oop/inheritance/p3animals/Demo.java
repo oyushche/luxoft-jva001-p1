@@ -5,7 +5,7 @@ public class Demo
     public static void main(String[] args)
     {
         Animal[] animals = new Animal[3];
-
+        
         Dog dog = new Dog();
         animals[0] = dog;
 

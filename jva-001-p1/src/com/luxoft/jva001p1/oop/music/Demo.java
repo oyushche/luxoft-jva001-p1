@@ -7,7 +7,6 @@ public class Demo
         Shop musicShop = new Shop();
         generateAndAddSongs(musicShop);
 
-
         musicShop.buy("Oleg", "Bereza");
         musicShop.buy("Oleg", "Beliy Dim", "Seriy Dim", "Mary say hello");
 

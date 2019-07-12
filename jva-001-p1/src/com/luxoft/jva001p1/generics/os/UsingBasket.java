@@ -8,19 +8,32 @@ public class UsingBasket // after erasing with the restriction
 {
     public static void main(String[] args)
     {
-        Basket<Product> basket = new Basket<>();
+        Basket<Product> products = new Basket<>();
 
-        basket.add(new Axe(1L, 2.5));
-        basket.add(new Monitor(2L, 17));
+        products.add(new Axe(1L, 2.5));
+        products.add(new Monitor(2L, 17));
 
         double totalPrice = 0;
-        for (Product p : basket.getProducts())
+        for (Product p : products.getProducts())
         {
             totalPrice += p.getPrice();
         }
 
         System.out.println(totalPrice);
 
-        Basket<Integer> basketss = new Basket<>();
+        Basket<Axe> axes = new Basket<>();
+        Basket<Monitor> monitors = new Basket<>();
+
+//        Basket<Integer> number = new Basket<>();
+
+        print(monitors);
+    }
+
+    public static void print(Basket<? extends Product> basket)
+    {
+        for (Product p : basket.getProducts())
+        {
+            System.out.println(p);
+        }
     }
 }

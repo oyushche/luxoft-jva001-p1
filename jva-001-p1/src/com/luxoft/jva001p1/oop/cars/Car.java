@@ -13,7 +13,7 @@ public class Car
         passengers = new ArrayList<>();
     }
 
-    void addPassenger(Passenger passenger)
+    public void addPassenger(Passenger passenger)
     {
         if (passengers.size() == 2)
         {
@@ -24,7 +24,7 @@ public class Car
         System.out.println(passenger.getName() + " inside");
     }
 
-    boolean findPassenger(String name)
+    public boolean findPassenger(String name)
     {
         for (Passenger passenger : passengers)
         {
@@ -37,7 +37,7 @@ public class Car
         return false;
     }
 
-    void displayAllPassengers()
+    public void displayAllPassengers()
     {
         if (passengers.size() < 1)
         {

@@ -2,6 +2,8 @@ package com.luxoft.jva001p1.oop.storage;
 
 public class Shop
 {
+    public static final String SHOP_NAME = "NBS";
+
     private Storage storage;
 
     void storeBird(Bird birdToStore)

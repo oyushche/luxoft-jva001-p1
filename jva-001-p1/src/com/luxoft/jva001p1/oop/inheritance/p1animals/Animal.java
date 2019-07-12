@@ -6,6 +6,13 @@ public class Animal
 
     public Animal()
     {
+        System.out.println("Animal");
+    }
+
+    public Animal(String picture)
+    {
+        System.out.println("Animal " + picture);
+        this.picture = picture;
     }
 
     public void makeNoise()

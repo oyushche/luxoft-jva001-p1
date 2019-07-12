@@ -6,6 +6,12 @@ public class Cat extends Animal
 
     public Cat()
     {
+        System.out.println("Cat");
+    }
+
+    public Cat(String name)
+    {
+        this.name = name;
     }
 
     public String getName()
@@ -17,4 +23,11 @@ public class Cat extends Animal
     {
         this.name = name;
     }
+
+    @Override
+    public void makeNoise()
+    {
+        System.out.println("Cat#makeNoise");
+    }
+
 }

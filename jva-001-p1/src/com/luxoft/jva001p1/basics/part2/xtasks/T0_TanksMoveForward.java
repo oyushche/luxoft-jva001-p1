@@ -15,7 +15,13 @@ public class T0_TanksMoveForward extends JPanel
     {
         moveForward();
         moveForward();
+
+        moveBack();
+
         moveForward();
+        moveForward();
+
+        moveBack();
 
         // TODO fill free to add more tests here
     }
@@ -33,7 +39,39 @@ public class T0_TanksMoveForward extends JPanel
     void moveForward()
     {
         // TODO YOUR CODE HERE
+        System.out.println("start x: " + tankX);
+
+        tankX = tankX + 64;
+        repaint();
+        sleep(500);
+
+        System.out.println("finish x: " + tankX);
     }
+
+
+    void moveBack()
+    {
+        // TODO YOUR CODE HERE
+        System.out.println("start x: " + tankX);
+
+        tankX = tankX - 64;
+        repaint();
+        sleep(500);
+
+        System.out.println("finish x: " + tankX);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Magic bellow. Do not worry about this now, you will understand everything in this course.
     // Please concentrate on your tasks only.

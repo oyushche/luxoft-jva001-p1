@@ -1,7 +1,5 @@
 package com.luxoft.jva001p1.generics.g0nothing;
 
-import com.luxoft.jva001p1.generics.Product;
-
 public class Demo
 {
     public static void main(String[] args)
@@ -17,7 +15,6 @@ public class Demo
         numbers.set(12);
 
         System.out.println(numbers.get());
-
     }
 }
 
@@ -35,9 +32,9 @@ class Basket<T>
         this.o = o;
     }
 
-    public static <Z> Z oo()
+    public static <Z> Z oo(Z z)
     {
-        return null;
+        return z;
     }
 }
 

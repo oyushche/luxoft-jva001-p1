@@ -5,10 +5,8 @@ import java.util.List;
 
 public class ForPres
 {
-
     public static void main(String[] args)
     {
-
 
     }
 }

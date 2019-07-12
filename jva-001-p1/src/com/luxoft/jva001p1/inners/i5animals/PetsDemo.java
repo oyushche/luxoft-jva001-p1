@@ -27,7 +27,7 @@ public class PetsDemo
             }
         });
 
-        // create anonymous class inherited from Cat
+        // create anonymous class inherited from Car
         pets.add(new Cat("Tiger")
         {
             @Override

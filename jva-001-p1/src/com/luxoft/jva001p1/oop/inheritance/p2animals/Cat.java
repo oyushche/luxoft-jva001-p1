@@ -11,7 +11,7 @@ public class Cat extends Animal
     @Override
     public void makeNoise()
     {
-        System.out.println("meow");
+        System.out.println("meau");
     }
 
     public String getName()
@@ -22,5 +22,14 @@ public class Cat extends Animal
     public void setName(String name)
     {
         this.name = name;
+    }
+
+
+    @Override
+    public String toString()
+    {
+        return " Car{ " + super.toString()
+                + ", name='" + name + '\''
+                +  '}';
     }
 }

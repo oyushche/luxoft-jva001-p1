@@ -2,7 +2,7 @@ package com.luxoft.jva001p1.oop.inheritance.kafee;
 
 import java.util.Objects;
 
-public class Drink extends Object
+public class Drink implements Comparable<Drink>
 {
     private String name;
 
@@ -34,6 +34,22 @@ public class Drink extends Object
     public void setPrice(double price)
     {
         this.price = price;
+    }
+
+    @Override
+    public int compareTo(Drink d)
+    {
+        if (this.price > d.getPrice())
+        {
+            return 1;
+        }
+
+        if (this.price < d.getPrice())
+        {
+            return -1;
+        }
+
+        return 0;
     }
 
     @Override

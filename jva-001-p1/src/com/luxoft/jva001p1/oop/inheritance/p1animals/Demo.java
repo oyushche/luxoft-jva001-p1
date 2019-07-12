@@ -4,20 +4,23 @@ public class Demo
 {
     public static void main(String[] args)
     {
-        Animal[] animals = new Animal[3];
+        Animal[] animals = new Animal[2];
 
         Dog dog = new Dog();
         animals[0] = dog;
 
-        Cat cat = new Cat();
+        Cat cat = new SuperCat();
         animals[1] = cat;
 
-        Wolf wolf = new Wolf();
-        animals[2] = wolf;
-
+//        Wolf wolf = new Wolf();
+//        animals[2] = wolf;
+//
+//        SuperCat superCat = new SuperCat();
+//        animals[3] = superCat;
+//
         listenAnimals(animals);
-
-        lookAtAnimals(animals);
+//
+//        lookAtAnimals(animals);
     }
 
     private static void listenAnimals(Animal[] animals)

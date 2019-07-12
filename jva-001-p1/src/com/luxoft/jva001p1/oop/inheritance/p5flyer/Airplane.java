@@ -5,18 +5,18 @@ public class Airplane implements Flyer
     @Override
     public void takeOff()
     {
-
+        System.out.println("Airplane#takeOff");
     }
 
     @Override
     public void land()
     {
-
+        System.out.println("Airplane#land");
     }
 
     @Override
     public void fly()
     {
-
+        System.out.println("Airplane#fly");
     }
 }
