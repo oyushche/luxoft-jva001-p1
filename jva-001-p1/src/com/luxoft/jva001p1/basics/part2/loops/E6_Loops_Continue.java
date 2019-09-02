@@ -4,7 +4,7 @@ public class E6_Loops_Continue
 {
     public static void main(String[] args)
     {
-        int counter = 0;
+        int counter = 1;
         int totalCycles = 10;
 
         while (counter < totalCycles)
