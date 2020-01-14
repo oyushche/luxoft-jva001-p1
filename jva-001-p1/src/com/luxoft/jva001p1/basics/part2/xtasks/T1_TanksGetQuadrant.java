@@ -22,7 +22,6 @@ public class T1_TanksGetQuadrant extends JPanel
 
         // TODO fill free to add more tests here
         // use callGetTankQuadrant(x, y) helper method
-        callGetTankQuadrant(10, 85);
     }
 
     /**
@@ -40,8 +39,8 @@ public class T1_TanksGetQuadrant extends JPanel
     // Magic bellow. Do not worry about this now, you will understand everything in this course.
     // Please concentrate on your tasks only.
 
-    final int BF_WIDTH = 576 + 20;
-    final int BF_HEIGHT = 576 + 20;
+    final int BF_WIDTH = 576 + 50;
+    final int BF_HEIGHT = 576 + 50;
 
     private List<String> valid = new ArrayList<>();
     private List<String> invalid = new ArrayList<>();
