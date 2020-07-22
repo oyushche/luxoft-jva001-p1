@@ -1,5 +1,7 @@
 package com.luxoft.jva001p1.basics.birds;
 
+import java.util.Arrays;
+
 public class Birds
 {
     static boolean SOUT_ENABLED = true;
@@ -9,7 +11,7 @@ public class Birds
     private static final int COUNT = 2;
     private static final int SOLD = 3;
 
-    static String[][] birds = new String[10][];
+    static String[][] birds = new String[50][];
     static int countOfBirds = 0;
 
     static void addBirdToStorage(String type, int price, int count)
@@ -34,7 +36,7 @@ public class Birds
         sout(count + " " + type + "s sold for " + getPrice(bird));
     }
 
-    static void takeALookAround()
+    static void printShopStatus()
     {
         System.out.println();
         sout("--------------------------------------------------");
@@ -81,9 +83,7 @@ public class Birds
     {
         if (birds.length * 0.7 > countOfBirds)
         {
-            String[][] dest = new String[birds.length * 2][];
-            System.arraycopy(birds, 0, dest, 0, countOfBirds);
-            birds = dest;
+            birds = Arrays.copyOf(birds, birds.length * 2);
         }
     }
 
@@ -156,7 +156,6 @@ public class Birds
         }
     }
 
-
     public static void main(String[] args)
     {
         System.out.println("Birds shop storage.");
@@ -164,19 +163,29 @@ public class Birds
 
         fillShopWithRandomBirds();
 
-        takeALookAround();
+        printShopStatus();
 
         addBirdToStorage("Parrot", 15, 10);
 
-        takeALookAround();
+        printShopStatus();
 
         sell("Eagle", 1);
         sell("Crow", 1);
 
         sell("Horse", 1);
 
-        takeALookAround();
+        printShopStatus();
     }
+
+
+
+
+
+
+
+
+
+
 
     static void fillShopWithRandomBirds()
     {
