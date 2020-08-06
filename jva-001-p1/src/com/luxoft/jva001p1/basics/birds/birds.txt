@@ -52,6 +52,31 @@ eagle| 3          | 10    | 30     | 9      |
 ---------------------------------------------
      | 13         |       | 40     | 21     |
 
+PART 2
+-------
+Данные
+- клиент ( имя, возраст, список покупок )
+
+5. таблица по продажам с сортировкой по сумме выручке по клиенту
+
+client name | sold_count | income
+----------------------------------
+Oleg        |            |
+-----------------------------------
+            |  Eagle - 3 | 30
+            |  Craw -  10| 20
+-----------------------------------
+total       |          13| 50
+
+Alina       |            |
+-----------------------------------
+            |  Eagle - 1 | 15
+            |  Craw - 20 | 36
+-----------------------------------
+total       |          21| 51
+
+
+
 Birds
 
 Old friend Nikolay said that he just opened a shop where he selling birds and you immediately gave him an advice to use computer programm. You said that you are programmer
