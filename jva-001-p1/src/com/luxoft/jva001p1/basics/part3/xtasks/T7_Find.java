@@ -17,7 +17,7 @@ public class T7_Find
 
     /**
      *
-     * Method should return index of found value of -1 if not found.
+     * Method should return index of found value or -1 if not found.
      *
      */
     public static int find1(int[] data, int value)
