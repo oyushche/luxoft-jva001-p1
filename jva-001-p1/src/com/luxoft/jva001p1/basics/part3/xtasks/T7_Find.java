@@ -6,13 +6,16 @@ public class T7_Find
 {
     public static void main(String[] args) throws Exception
     {
-        int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] numbers = {0, 1, 100, 3, 4, 5, 6, 7, 8, 9};
         System.out.println(Arrays.toString(numbers));
         System.out.println();
 
 
-        find1(numbers, 100);
-        System.out.println(Arrays.toString(numbers));
+        int result1 = find1(numbers, 100);
+        System.out.println(result1);
+
+        int result2 = find2(numbers, 100);
+        System.out.println(result2);
     }
 
     /**
